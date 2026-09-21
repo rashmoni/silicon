@@ -365,7 +365,7 @@ body {
         max-width: none;
     }
 
-    .features-cards .card h5{
+    .features-cards .card h3{
         font-weight: 800;
         font-size: 18px;
         line-height: 140%;
@@ -444,7 +444,7 @@ body {
             width: 28px;
         }
 
-        .features-cards .card h5{
+        .features-cards .card h3{
             font-size: 20px;
         }
 
@@ -534,7 +534,7 @@ body {
     background: var(--secondary-background);
     padding: 48px 16px;
 
-    h1{
+    h2{
         text-align: center;
         color: var(--primary);
         font-weight: 800;
@@ -569,7 +569,7 @@ body {
         width: 100%;
         max-width: 636px;
 
-        h4{
+        h3{
             font-weight: 800;
             font-size: 20px;
             line-height: 140%;
@@ -594,7 +594,7 @@ body {
         gap: 32px;
         padding: 64px 24px;
 
-        h1{
+        h2{
             font-size: 32px;
         }
 
@@ -611,7 +611,7 @@ body {
             flex: 1;
         }
 
-        .text-container h4{
+        .text-container h3{
             font-size: 24px;
             line-height: 130%;
         }
@@ -622,7 +622,7 @@ body {
         gap: 40px;
         padding: 80px 24px;
 
-        h1{
+        h2{
             font-size: 40px;
         }
 
@@ -640,7 +640,7 @@ body {
             flex: 1;
         }
 
-        .text-container h4{
+        .text-container h3{
             line-height: 100%;
         }
     }
