@@ -15,6 +15,7 @@
 :root {
   /* surfaces */
   --background: #FFFFFF;
+  --secondary-background:#F3F6FF ;
   --surface: #FFFFFF;
   --foreground: #0B0F19;
   --foreground-muted: #585C67;
@@ -33,6 +34,7 @@
 
 :root[data-theme="dark"] {
   --background: #0B0F19;
+  --secondary-background:#1A1D2B ;
   --surface: #151822;
   --foreground: #FFFFFF;
   --foreground-muted: #A3A6AD;
@@ -521,3 +523,126 @@ body {
         }
     }
 }
+
+.how-does-it-work{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: var(--secondary-background);
+    padding: 48px 16px;
+
+    h1{
+        text-align: center;
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 130%;
+        margin: 0;
+    }
+
+    .phone-carousel{
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-image{
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .carousel-image:not(:nth-child(2)){
+        display: none;
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 636px;
+
+        h4{
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: 0px;
+            text-align: center;
+            color: var(--primary);
+            margin: 0 0 8px;
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0px;
+            text-align: center;
+            color: var(--secondary);
+            margin: 0;
+        }
+    }
+
+    @media (min-width: 768px){
+        gap: 32px;
+        padding: 64px 24px;
+
+        h1{
+            font-size: 32px;
+        }
+
+        .phone-carousel{
+            max-width: 720px;
+            gap: 16px;
+        }
+
+        .carousel-image,
+        .carousel-image:not(:nth-child(2)){
+            display: block;
+            width: auto;
+            max-width: 220px;
+            flex: 1;
+        }
+
+        .text-container h4{
+            font-size: 24px;
+            line-height: 130%;
+        }
+    }
+
+    @media (min-width: 1024px){
+        min-height: 100vh;
+        gap: 40px;
+        padding: 80px 24px;
+
+        h1{
+            font-size: 40px;
+        }
+
+        .phone-carousel{
+            max-width: 1184px;
+            max-height: 663px;
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .carousel-image,
+        .carousel-image:not(:nth-child(2)){
+            max-width: 328px;
+            max-height: 663px;
+            flex: 1;
+        }
+
+        .text-container h4{
+            line-height: 100%;
+        }
+    }
+}
+
