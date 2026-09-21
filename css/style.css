@@ -12,6 +12,9 @@ body {
 .container {
   max-width: 1296px;
   margin: 0 auto;
+}
+
+.hero-inner {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -48,5 +51,108 @@ body {
 
 .hero-image img {
   width: 100%;
+  height: auto;
+}
+.site-header {
+  padding: 20px 24px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0B0F19;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #585C67;
+}
+
+.btn-signin {
+  background-color: #6366F1;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-signin:hover {
+  background-color: #4F46E5;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.switch input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: #D4D7DD;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.switch input:checked + .slider {
+  background-color: #6366F1;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.switch input:focus-visible + .slider {
+  outline: 2px solid #6366F1;
+  outline-offset: 2px;
+}
+.logo img {
+  width: 34px;
   height: auto;
 }
