@@ -9,18 +9,46 @@
 }
 
 /* ============================================
-   Design tokens
+   Design tokens — light (default)
    ============================================ */
 
 :root {
+  /* surfaces */
+  --page-bg: #FFFFFF;
+  --surface: #FFFFFF;
+
+  /* text */
   --text: #0B0F19;
   --text-muted: #585C67;
-  --accent: #6366F1;
-  --accent-dark: #4F46E5;
-  --surface: #FFFFFF;
+
+  /* lines */
   --border: #D4D7DD;
 
+  /* brand */
+  --accent: #6366F1;
+  --accent-dark: #4F46E5;
+  --on-accent: #FFFFFF;
+
   --hero-gradient: linear-gradient(180deg, #FFFFFF 0%, #FDF5FF 100%);
+}
+
+/* ============================================
+   Design tokens — dark (only what changes)
+   ============================================ */
+
+:root[data-theme="dark"] {
+  --page-bg: #0B0F19;
+  --surface: #151822;
+
+  --text: #FFFFFF;
+  --text-muted: #A3A6AD;
+
+  --border: #2E3440;
+
+  --hero-gradient: linear-gradient(180deg, #1A1F28 0%, #141023 100%);
+}
+:root[data-theme="dark"] .hero-buttons img {
+  filter: invert(1);
 }
 
 /* ============================================
@@ -31,6 +59,7 @@ body {
   margin: 0;
   font-family: 'Manrope', system-ui, sans-serif;
   color: var(--text);
+  background-color: var(--page-bg);
 }
 
 .container {
@@ -81,7 +110,7 @@ body {
 
 .btn-signin {
   background-color: var(--accent);
-  color: var(--surface);
+  color: var(--on-accent);
   font-size: 15px;
   font-weight: 600;
   padding: 11px 20px;
@@ -129,7 +158,7 @@ body {
   left: 3px;
   width: 18px;
   height: 18px;
-  background-color: var(--surface);
+  background-color: var(--on-accent);
   border-radius: 50%;
   transition: transform 0.2s ease;
 }
